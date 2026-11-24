@@ -1,0 +1,14 @@
+# Cloudflare Worker 배포 설정 — 자세한 순서는 DEPLOY.md 참고
+name = "space-birth-certificate"
+main = "worker.js"
+compatibility_date = "2025-11-01"
+workers_dev = true
+
+# 요청 로그를 남기지 않습니다 (생년월일이 기록되지 않도록)
+[observability]
+enabled = false
+
+[vars]
+# 내 GitHub Pages 주소의 Origin (경로 없이). 여러 개면 쉼표로 구분.
+# 예: "https://chang-hoon.github.io"
+ALLOWED_ORIGINS = "https://YOUR-GITHUB-ID.github.io"
